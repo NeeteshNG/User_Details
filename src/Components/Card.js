@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Card({data}) {
   return (
-    <div className='card-container'>
-        <div class="card">
+    <Link to='/userdetails' className='card-container'>
+        <div className="card">
             <p>{data.username}</p>
             <p>Post : {data.post}</p>
         </div>
-    </div>
+    </Link>
   )
 }
 
