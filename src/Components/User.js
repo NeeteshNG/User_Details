@@ -1,6 +1,5 @@
 import React from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import userData from './userData.json'
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import PostPopUp from './PostPopUp';
 
@@ -22,6 +21,10 @@ function User() {
       setSelectedPost(null);
       setIsPopupOpen(false);
     };
+
+    const handleCloseDetails = () => {
+        navigate('/directory')
+    }
   
     if (!user) {
       return <div>User data not found.</div>;
@@ -29,6 +32,7 @@ function User() {
 
     return (
         <div className='details-container'>
+            <button className='buttons' onClick={handleCloseDetails}>X</button>
             <h2>DETAIL</h2>
             <div className='personal-details'>
                 <p>
