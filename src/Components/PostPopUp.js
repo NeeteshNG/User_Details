@@ -5,6 +5,7 @@ function PostPopUp({ post, onClose }) {
     <div className="post-details-popup">
       <div className="post-details">
         <h3>Post Details</h3>
+        <img src={post.url}/>
         <p>{post.content}</p>
         <button className="buttons" onClick={onClose}>Close</button>
       </div>
