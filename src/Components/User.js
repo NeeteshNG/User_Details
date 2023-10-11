@@ -1,13 +1,13 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import userData from './userData.json'
 import { useState } from 'react';
 import PostPopUp from './PostPopUp';
 
 function User() {
-    const { id } = useParams();
-
-    const user = userData.find((userData) => userData.id === parseInt(id));
+    const navigate = useNavigate()
+    const location = useLocation()
+    const user = location.state;
 
     const [selectedPost, setSelectedPost] = useState(null);
 
