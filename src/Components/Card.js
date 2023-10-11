@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Card({data}) {
+function Card({data, numPosts}) {
   return (
     <Link to={`/userdetails/${data.id}`} className='card-container'>
         <div className="card">
             <p>{data.username}</p>
-            <p>Post : {data.post}</p>
+            <p>Post : {numPosts}</p>
         </div>
     </Link>
   )

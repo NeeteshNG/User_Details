@@ -6,7 +6,7 @@ function Directory() {
   return (
     <div>
       {userData.map(user => 
-        <Card key={user.id} data={user}/>
+        <Card key={user.id} data={user} numPosts={user.posts.length}/>
       )}
     </div>
   )     
