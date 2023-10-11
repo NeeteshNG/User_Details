@@ -1,11 +1,27 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import userData from './userData.json'
+import { useState } from 'react';
+import PostPopUp from './PostPopUp';
 
 function User() {
     const { id } = useParams();
 
     const user = userData.find((userData) => userData.id === parseInt(id));
+
+    const [selectedPost, setSelectedPost] = useState(null);
+
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const openPostDetails = (post) => {
+        setSelectedPost(post);
+        setIsPopupOpen(true);
+      };
+    
+    const closePostDetails = () => {
+      setSelectedPost(null);
+      setIsPopupOpen(false);
+    };
   
     if (!user) {
       return <div>User data not found.</div>;
@@ -27,12 +43,16 @@ function User() {
             </div>
             <div className='post-container'>
                 {user.posts.map((post) => (
-                    <div key={post.id} className='post'>
+                    <div key={post.id} className='post' onClick={() => openPostDetails(post)}>
                         <h3>POST</h3>
                         <p>{post.content}</p>
                     </div>
                 ))}
             </div>
+            
+            {isPopupOpen && selectedPost && 
+                (<PostPopUp post={selectedPost} onClose={closePostDetails} />)
+            }
         </div>
     )
 }
