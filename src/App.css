@@ -145,12 +145,16 @@
 
 /* CSS for Post*/
 .post-container{
-  border: 3px black solid;
-  padding: 20px;
   display: flex;
-  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .post{
   display: flex;
+  border: 3px black solid;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-top: 10px;
 }

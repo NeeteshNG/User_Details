@@ -25,6 +25,14 @@ function User() {
                     <p>Phone : {user.phone}</p>
                 </p>
             </div>
+            <div className='post-container'>
+                {user.posts.map((post) => (
+                    <div key={post.id} className='post'>
+                        <h3>POST</h3>
+                        <p>{post.content}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
