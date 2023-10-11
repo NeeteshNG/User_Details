@@ -11,7 +11,7 @@ function Directory() {
     {id : 6, name : "Deepti Vishw", address : "Shimla", phone : "+91-9787254544", username : "Deepti", post : 88},
     {id : 7, name : "Shruti Chouhan", address : "Kashmir", phone : "+91-9754627546", username : "Shruti", post : 4},
     {id : 8, name : "Kapil Bhati", address : "Kota", phone : "+91-9724254211", username : "Kapil", post : 46},
-    {id : 9, name : "Piyush Sharma", address : "Indore", phone : "+91-8762164213", username : "Piyush", post : 100},
+    {id : 9, name : "Piyush Sharma", address : "Indore", phone : "+91-8925484132", username : "Piyush", post : 100},
   ]
 
   return (

@@ -3,7 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Directory from './Components/Directory';
 import Home from './Components/Home';
-import UserDetails from './Components/UserDetails';
+import UserDetails from './Components/User';
 
 function App() {
   return (
