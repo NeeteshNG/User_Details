@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Card() {
+function Card({data}) {
   return (
     <div className='card-container'>
         <div class="card">
-            <p>NeeteshNG</p>
-            <p>Post : 2</p>
+            <p>{data.username}</p>
+            <p>Post : {data.post}</p>
         </div>
     </div>
   )
