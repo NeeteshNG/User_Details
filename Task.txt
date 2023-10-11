@@ -1,0 +1,31 @@
+Create a simple user directory where you display a list of name cards for all the members in the
+given user list.
+
+- Each card should have the user name in the top left part and the total number of posts
+by the user on the top right.
+
+- The card should be clickable and once clicked it should show the user’s detail page with
+the top section displaying all user details and lower section displaying all the posts as
+cards.
+
+- The upper segment of the profile page should have Name(top left side),username and
+catch phrase(below the name) Address(right top), email and phone(bottom right).
+
+- Each post should be structured with a title section and content section with max 3 posts
+in a single row.
+
+- Design this responsively to showcase only one post in a single row for mobile view.
+
+- Points to ensure in the system
+
+- Each user should have a unique route to their page.
+
+- There should be a back button for going back to people directory
+
+- The pages should be responsive and not break in mobile views.
+
+- You should serve the user list via states
+
+- Bonus point:
+- On click of post a pop-up is display with the complete post content. This pop-up
+closes if we click outside the popup.
