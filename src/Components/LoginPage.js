@@ -26,15 +26,15 @@ function LoginPage( {data, setLoggedIn} ) {
     
     return (
         <div className='login-container'>
-            <div class="signin"> 
+            <div className="signin"> 
 
-                <div class="content"> 
+                <div className="content"> 
 
                     <h2>Log In</h2> 
 
-                    <div class="form"> 
+                    <div className="form"> 
 
-                        <div class="inputBox"> 
+                        <div className="inputBox"> 
 
                         <input 
                             type="text" 
@@ -44,7 +44,7 @@ function LoginPage( {data, setLoggedIn} ) {
                             required/> <i>Username</i> 
                         </div> 
 
-                        <div class="inputBox"> 
+                        <div className="inputBox"> 
 
                             <input 
                                 type="password" 
@@ -57,7 +57,7 @@ function LoginPage( {data, setLoggedIn} ) {
 
                         {error && <p className='login-error' >{error}</p>}
 
-                        <div class="inputBox" onClick={handleLogin}> 
+                        <div className="inputBox" onClick={handleLogin}> 
 
                             <input type="submit" value="Login"/> 
 

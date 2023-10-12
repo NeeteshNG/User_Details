@@ -311,12 +311,19 @@
 .signin .content .form .inputBox input[type="submit"]
 {
   padding: 10px;
-  background: white;
-  color: #000;
+  border: 5px #333333 solid;
+  background: #222222;
+  color: white;
   font-weight: 600;
   font-size: 1.35em;
   letter-spacing: 0.05em;
   cursor: pointer;
+}
+.signin .content .form .inputBox input[type="submit"]:hover
+{
+  border-color: white;
+  background: #333333;
+  color: white;
 }
 input[type="submit"]:active
 {
