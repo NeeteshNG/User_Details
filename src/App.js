@@ -1,11 +1,11 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header';
 import Directory from './Components/Directory';
 import Home from './Components/Home';
-import UserDetails from './Components/User';
 import LoginPage from './Components/LoginPage';
 import { useState } from 'react';
+import User from './Components/User';
 
 const data = [
   {
@@ -164,8 +164,8 @@ function App() {
         />
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/directory' element={<Directory data={data}/>}></Route>
-          <Route path='/userdetails/:id' element={<UserDetails data={data}/>}></Route>
+          <Route path='/directory' element={loggedIn ? <Directory data={data}/> : <Navigate to="/loginpage" replace />}></Route>
+          <Route path='/userdetails/:id' element={loggedIn ? <User data={data}/> : <Navigate to="/loginpage" replace />}></Route>
           <Route 
             path='/loginpage' 
             element={<LoginPage 
