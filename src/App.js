@@ -5,6 +5,7 @@ import Directory from './Components/Directory';
 import Home from './Components/Home';
 import UserDetails from './Components/User';
 import LoginPage from './Components/LoginPage';
+import { useState } from 'react';
 
 const data = [
   {
@@ -28,6 +29,7 @@ const data = [
     "address": "Banglore",
     "phone": "+91-9815421421",
     "username": "Shri",
+    "password": "shri@123",
     "posts": [
       {"id" : 1, "content" : "A Content 1", "url" : "https://picsum.photos/200"},
       {"id" : 2, "content" : "A Content 2", "url" : "https://picsum.photos/200"},
@@ -47,6 +49,7 @@ const data = [
     "address": "Mumbai",
     "phone": "+91-8741216598",
     "username": "Rahul",
+    "password": "rahul@123",
     "posts": [
       {"id" : 1, "content" : "A Content 1", "url" : "https://source.unsplash.com/random/200x200?sig=1"},
       {"id" : 2, "content" : "A Content 2", "url" : "https://source.unsplash.com/random/200x200?sig=1"},
@@ -62,6 +65,7 @@ const data = [
     "address": "Bhopal",
     "phone": "+91-9875110647",
     "username": "Rohit",
+    "password": "rohit@123",
     "posts": [
       {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
       {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"},
@@ -79,6 +83,7 @@ const data = [
     "address": "Ujjain",
     "phone": "+91-9874556252",
     "username": "Deepak",
+    "password": "deepak@123",
     "posts": [
       {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
       {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"},
@@ -97,6 +102,7 @@ const data = [
     "address": "Shimla",
     "phone": "+91-9787254544",
     "username": "Deepti",
+    "password": "deepti@123",
     "posts": [
       {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
       {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"},
@@ -113,6 +119,7 @@ const data = [
     "address": "Kashmir",
     "phone": "+91-9754627546",
     "username": "Shruti",
+    "password": "shruti@123",
     "posts": [
       {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
       {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"},
@@ -126,6 +133,7 @@ const data = [
     "address": "Kota",
     "phone": "+91-9724254211",
     "username": "Kapil",
+    "password": "kapil@123",
     "posts": [
       {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
       {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"}
@@ -137,6 +145,7 @@ const data = [
     "address": "Indore",
     "phone": "+91-8925484132",
     "username": "Piyush",
+    "password": "piyush@123",
     "posts": [
       {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"}
     ]
@@ -144,16 +153,26 @@ const data = [
 ]
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <BrowserRouter>
       <div className="App">
-        <Header/>
-
+        <Header
+          loggedIn={loggedIn} 
+          setLoggedIn={setLoggedIn} 
+        />
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/directory' element={<Directory data={data}/>}></Route>
           <Route path='/userdetails/:id' element={<UserDetails data={data}/>}></Route>
-          <Route path='/loginpage' element={<LoginPage data={data}/>}></Route>
+          <Route 
+            path='/loginpage' 
+            element={<LoginPage 
+                        loggedIn={loggedIn} 
+                        setLoggedIn={setLoggedIn} 
+                        data={data}/>}>
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>

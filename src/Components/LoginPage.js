@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 
-function LoginPage( {data} ) {
+function LoginPage( {data, setLoggedIn} ) {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -14,6 +14,7 @@ function LoginPage( {data} ) {
         );
 
         if (user){
+            setLoggedIn(true);
             navigate('/directory');
         }
         else{
@@ -51,7 +52,7 @@ function LoginPage( {data} ) {
 
                         </div> 
 
-                        {error && <p>{error}</p>}
+                        {error && <p className='login-error' >{error}</p>}
 
                         <div class="inputBox" onClick={handleLogin}> 
 
