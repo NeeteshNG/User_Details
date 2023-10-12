@@ -12,12 +12,12 @@ function Header({loggedIn, setLoggedIn}) {
 
     return (
       <>
-          <ul class="nav-links">
+          <ul className="nav-links">
               <NavLink to='/'><li><a href="#">Home</a></li></NavLink>
-              {!loggedIn && (<NavLink to='/loginpage'><li class="center"><a href="#">
+              {!loggedIn && (<NavLink to='/loginpage'><li className="center"><a href="#">
                 Login
                 </a></li></NavLink>)}
-              {loggedIn && (<NavLink to='/loginpage' onClick={handleLogOut}><li class="center"><a href="#">
+              {loggedIn && (<NavLink to='/loginpage' onClick={handleLogOut}><li className="center"><a href="#">
               Log Out
               </a></li></NavLink>)}
           </ul>

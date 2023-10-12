@@ -15,7 +15,8 @@ function LoginPage( {data, setLoggedIn} ) {
 
         if (user){
             setLoggedIn(true);
-            navigate('/directory');
+            navigate(`/directory`);
+            // navigate(`/userdetails/${user.id}`, {state : user});
         }
         else{
             setError('Invalid Username or Password.');
@@ -38,6 +39,7 @@ function LoginPage( {data, setLoggedIn} ) {
                         <input 
                             type="text" 
                             value={username} 
+                            name='username'
                             onChange={(e) => setUsername(e.target.value)}
                             required/> <i>Username</i> 
                         </div> 
@@ -47,6 +49,7 @@ function LoginPage( {data, setLoggedIn} ) {
                             <input 
                                 type="password" 
                                 value={password} 
+                                name='password'
                                 onChange={(e) => setPassword(e.target.value)}
                                 required/> <i>Password</i> 
 
