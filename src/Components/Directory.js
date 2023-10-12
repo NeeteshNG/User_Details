@@ -27,16 +27,16 @@ function Directory() {
       "phone": "+91-9815421421",
       "username": "Shri",
       "posts": [
-        {"id" : 1, "content" : "A Content 1"},
-        {"id" : 2, "content" : "A Content 2"},
-        {"id" : 3, "content" : "A Content 3"},
-        {"id" : 4, "content" : "A Content 4"},
-        {"id" : 5, "content" : "A Content 5"},
-        {"id" : 6, "content" : "A Content 6"},
-        {"id" : 7, "content" : "A Content 7"},
-        {"id" : 8, "content" : "A Content 8"},
-        {"id" : 9, "content" : "A Content 9"},
-        {"id" : 10, "content" : "A Content 10"}
+        {"id" : 1, "content" : "A Content 1", "url" : "https://picsum.photos/200"},
+        {"id" : 2, "content" : "A Content 2", "url" : "https://picsum.photos/200"},
+        {"id" : 3, "content" : "A Content 3", "url" : "https://picsum.photos/200"},
+        {"id" : 4, "content" : "A Content 4", "url" : "https://picsum.photos/200"},
+        {"id" : 5, "content" : "A Content 5", "url" : "https://picsum.photos/200"},
+        {"id" : 6, "content" : "A Content 6", "url" : "https://picsum.photos/200"},
+        {"id" : 7, "content" : "A Content 7", "url" : "https://picsum.photos/200"},
+        {"id" : 8, "content" : "A Content 8", "url" : "https://picsum.photos/200"},
+        {"id" : 9, "content" : "A Content 9", "url" : "https://picsum.photos/200"},
+        {"id" : 10, "content" : "A Content 10", "url" : "https://picsum.photos/200"}
       ]
     },
     {
@@ -46,12 +46,12 @@ function Directory() {
       "phone": "+91-8741216598",
       "username": "Rahul",
       "posts": [
-        {"id" : 1, "content" : "A Content 1"},
-        {"id" : 2, "content" : "A Content 2"},
-        {"id" : 3, "content" : "A Content 3"},
-        {"id" : 4, "content" : "A Content 4"},
-        {"id" : 5, "content" : "A Content 5"},
-        {"id" : 6, "content" : "A Content 6"}
+        {"id" : 1, "content" : "A Content 1", "url" : "https://source.unsplash.com/random/200x200?sig=1"},
+        {"id" : 2, "content" : "A Content 2", "url" : "https://source.unsplash.com/random/200x200?sig=1"},
+        {"id" : 3, "content" : "A Content 3", "url" : "https://source.unsplash.com/random/200x200?sig=1"},
+        {"id" : 4, "content" : "A Content 4", "url" : "https://source.unsplash.com/random/200x200?sig=1"},
+        {"id" : 5, "content" : "A Content 5", "url" : "https://source.unsplash.com/random/200x200?sig=1"},
+        {"id" : 6, "content" : "A Content 6", "url" : "https://source.unsplash.com/random/200x200?sig=1"}
       ]
     },
     {
@@ -61,14 +61,14 @@ function Directory() {
       "phone": "+91-9875110647",
       "username": "Rohit",
       "posts": [
-        {"id" : 1, "content" : "A Content 1"},
-        {"id" : 2, "content" : "A Content 2"},
-        {"id" : 3, "content" : "A Content 3"},
-        {"id" : 4, "content" : "A Content 4"},
-        {"id" : 5, "content" : "A Content 5"},
-        {"id" : 6, "content" : "A Content 6"},
-        {"id" : 7, "content" : "A Content 7"},
-        {"id" : 8, "content" : "A Content 8"}
+        {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 3, "content" : "A Content 3", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 4, "content" : "A Content 4", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 5, "content" : "A Content 5", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 6, "content" : "A Content 6", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 7, "content" : "A Content 7", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 8, "content" : "A Content 8", "url" : "https://loremflickr.com/320/240"}
       ]
     },
     {
@@ -78,15 +78,15 @@ function Directory() {
       "phone": "+91-9874556252",
       "username": "Deepak",
       "posts": [
-        {"id" : 1, "content" : "A Content 1"},
-        {"id" : 2, "content" : "A Content 2"},
-        {"id" : 3, "content" : "A Content 3"},
-        {"id" : 4, "content" : "A Content 4"},
-        {"id" : 5, "content" : "A Content 5"},
-        {"id" : 6, "content" : "A Content 6"},
-        {"id" : 7, "content" : "A Content 7"},
-        {"id" : 8, "content" : "A Content 8"},
-        {"id" : 9, "content" : "A Content 9"}
+        {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 3, "content" : "A Content 3", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 4, "content" : "A Content 4", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 5, "content" : "A Content 5", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 6, "content" : "A Content 6", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 7, "content" : "A Content 7", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 8, "content" : "A Content 8", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 9, "content" : "A Content 9", "url" : "https://loremflickr.com/320/240"}
       ]
     },
     {
@@ -96,13 +96,13 @@ function Directory() {
       "phone": "+91-9787254544",
       "username": "Deepti",
       "posts": [
-        {"id" : 1, "content" : "A Content 1"},
-        {"id" : 2, "content" : "A Content 2"},
-        {"id" : 3, "content" : "A Content 3"},
-        {"id" : 4, "content" : "A Content 4"},
-        {"id" : 5, "content" : "A Content 5"},
-        {"id" : 6, "content" : "A Content 6"},
-        {"id" : 7, "content" : "A Content 7"}
+        {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 3, "content" : "A Content 3", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 4, "content" : "A Content 4", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 5, "content" : "A Content 5", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 6, "content" : "A Content 6", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 7, "content" : "A Content 7", "url" : "https://loremflickr.com/320/240"}
       ]
     },
     {
@@ -112,10 +112,10 @@ function Directory() {
       "phone": "+91-9754627546",
       "username": "Shruti",
       "posts": [
-        {"id" : 1, "content" : "A Content 1"},
-        {"id" : 2, "content" : "A Content 2"},
-        {"id" : 3, "content" : "A Content 3"},
-        {"id" : 4, "content" : "A Content 4"}
+        {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 3, "content" : "A Content 3", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 4, "content" : "A Content 4", "url" : "https://loremflickr.com/320/240"}
       ]
     },
     {
@@ -125,8 +125,8 @@ function Directory() {
       "phone": "+91-9724254211",
       "username": "Kapil",
       "posts": [
-        {"id" : 1, "content" : "A Content 1"},
-        {"id" : 2, "content" : "A Content 2"}
+        {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"},
+        {"id" : 2, "content" : "A Content 2", "url" : "https://loremflickr.com/320/240"}
       ]
     },
     {
@@ -136,7 +136,7 @@ function Directory() {
       "phone": "+91-8925484132",
       "username": "Piyush",
       "posts": [
-        {"id" : 1, "content" : "A Content 1"}
+        {"id" : 1, "content" : "A Content 1", "url" : "https://loremflickr.com/320/240"}
       ]
     }
   ]
