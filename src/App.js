@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Directory from './Components/Directory';
 import Home from './Components/Home';
 import UserDetails from './Components/User';
+import LoginPage from './Components/LoginPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Home/>}></Route>
           <Route path='/directory' element={<Directory/>}></Route>
           <Route path='/userdetails/:id' element={<UserDetails/>}></Route>
+          <Route path='/loginpage' element={<LoginPage/>}></Route>
         </Routes>
       </div>
     </BrowserRouter>

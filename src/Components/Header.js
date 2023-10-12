@@ -7,6 +7,7 @@ function Header() {
         <ul class="nav-links">
             <NavLink to='/'><li><a href="#">Home</a></li></NavLink>
             <NavLink to='/directory'><li class="center"><a href="#">Directory</a></li></NavLink>
+            <NavLink to='/loginpage'><li class="center"><a href="#">Login</a></li></NavLink>
         </ul>
     </>
   )
