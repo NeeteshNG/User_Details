@@ -1,21 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { React, Component } from "react";
+import { Link } from "react-router-dom";
 
-function Card({data, numPosts, onCardClick}) {
-  return (
-    <div>
-      <Link 
-      state={data} 
-      to={`/userdetails/${data.id}`} 
-      className='card-container' 
-      onClick={onCardClick}>
-        <div className="card">
-            <p>{data.username}</p>
-            <p>Post : {numPosts}</p>
-        </div>
-      </Link>
-    </div>
-  )
+class Card extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <Link
+          state={this.props.data}
+          to={`/userdetails/${this.props.data.id}`}
+          className="card-container"
+          onClick={this.props.onCardClick}
+        >
+          <div className="card">
+            <p>{this.props.data.username}</p>
+            <p>Post: {this.props.numPosts}</p>
+          </div>
+        </Link>
+      </div>
+    );
+  }
 }
 
-export default Card
+export default Card;

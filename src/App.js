@@ -4,7 +4,7 @@ import Header from './Components/Header';
 import Directory from './Components/Directory';
 import Home from './Components/Home';
 import LoginPage from './Components/LoginPage';
-import { useState } from 'react';
+import { Component } from 'react';
 import User from './Components/User';
 
 const data = [
@@ -152,31 +152,63 @@ const data = [
   }
 ]
 
-function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loggedIn: false,
+    };
+  }
 
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Header
-          loggedIn={loggedIn} 
-          setLoggedIn={setLoggedIn} 
-        />
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/directory' element={loggedIn ? <Directory data={data}/> : <Navigate to="/loginpage" replace />}></Route>
-          <Route path='/userdetails/:id' element={loggedIn ? <User data={data}/> : <Navigate to="/loginpage" replace />}></Route>
-          <Route 
-            path='/loginpage' 
-            element={<LoginPage 
-                        loggedIn={loggedIn} 
-                        setLoggedIn={setLoggedIn} 
-                        data={data}/>}>
-          </Route>
-        </Routes>
-      </div>
-    </BrowserRouter>
-  );
+  render() {
+    return (
+        <div className="App">
+          <Header
+            loggedIn={this.state.loggedIn}
+            setLoggedIn={this.setLoggedIn}
+            history={this.props.history}
+          />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route
+              path='/directory'
+              element={
+                this.state.loggedIn ? (
+                  <Directory data={data} />
+                ) : (
+                  <Navigate to="/loginpage" replace />
+                )
+              }
+            />
+            <Route
+              path='/userdetails/:id'
+              element={
+                this.state.loggedIn ? (
+                  <User data={data} />
+                ) : (
+                  <Navigate to="/loginpage" replace />
+                )
+              }
+            />
+            <Route
+              path='/loginpage'
+              element={
+                <LoginPage
+                  loggedIn={this.state.loggedIn}
+                  setLoggedIn={this.setLoggedIn}
+                  data={data}
+                />
+              }
+            />
+          </Routes>
+        </div>
+    );
+  }
+
+  setLoggedIn = (loggedIn) => {
+    this.setState({ loggedIn });
+  };
 }
 
 export default App;
+

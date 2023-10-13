@@ -1,16 +1,20 @@
-import React from 'react';
+import {React, Component} from 'react';
 
-function PostPopUp({ post, onClose }) {
-  return (
-    <div className="post-details-popup">
-      <div className="post-details">
-        <h3>Post Details</h3>
-        <img src={post.url}/>
-        <p>{post.content}</p>
-        <button className="buttons" onClick={onClose}>Close</button>
+class PostPopUp extends Component {
+  render() {
+    return (
+      <div className="post-details-popup">
+        <div className="post-details">
+          <h3>Post Details</h3>
+          <img alt='A Post Content' src={this.props.post.url} />
+          <p>{this.props.post.content}</p>
+          <button className="buttons" onClick={this.props.onClose}>
+            Close
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default PostPopUp;
