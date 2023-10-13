@@ -4,10 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const handleLogOut = () => {
       this.props.setLoggedIn(false);
@@ -24,20 +20,20 @@ class Header extends Component {
         <ul className="nav-links">
           <NavLink to='/'>
             <li>
-              <a>Home</a>
+              <div id='a'>Home</div>
             </li>
           </NavLink>
           {!this.props.loggedIn && (
             <NavLink to='/loginpage'>
               <li className="center">
-                <a>Login</a>
+                <div id='a'>Login</div>
               </li>
             </NavLink>
           )}
           {this.props.loggedIn && (
             <NavLink to='/loginpage' onClick={handleLogOut}>
               <li className="center">
-                <a>Log Out</a>
+                <div id='a'>Log Out</div>
               </li>
             </NavLink>
           )}

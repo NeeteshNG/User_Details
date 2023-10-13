@@ -10,7 +10,7 @@ function LoginPage( {data, setLoggedIn} ) {
 
     const handleLogin = () => {
         const user = data.find(
-            (user) => user.username == username && user.password == password
+            (user) => user.username === username && user.password === password
         );
 
         if (user){

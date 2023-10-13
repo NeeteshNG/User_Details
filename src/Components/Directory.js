@@ -3,10 +3,6 @@ import Card from "./Card";
 import { Link } from "react-router-dom";
 
 class Directory extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const openUserDetails = (id) => {
       if (this.props.history) {
